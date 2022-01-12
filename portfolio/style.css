@@ -1,0 +1,83 @@
+/*========= GOOGLE FONTS ==========*/
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Merriweather:wght@700&display=swap');
+
+/*========= VARIABLES CSS ==========*/
+:root {
+	/*========= Colors ==========*/
+	--white-color: #ffffff;
+	--gold-color: #bdae82;
+	--black-color: #000000;
+
+	/*========= Font and typography ==========*/
+	--body-font: 'Inter', sans-serif;
+	--title-font: 'Merriweather', serif;
+	--h1-font-size: 60px;
+	--h2-font-size: 40px;
+	--h3-font-size: 28px;
+	--medium-font-size: 24px;
+	--normal-font-size: 20px;
+	--small-font-size: 18px;
+}
+
+/*========= BASE ==========*/
+*,
+*::before,
+*::after {
+	padding: 0;
+	margin: 0;
+	border: 0;
+	box-sizing: border-box;
+}
+
+a {
+	text-decoration: none;
+}
+
+ul,
+ol,
+li {
+	list-style: none;
+}
+
+img {
+	vertical-align: top;
+}
+
+h1,
+h2,
+h3 {
+	font-weight: bold;
+	font-family: var(--title-font);
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	font-family: var(--body-font);
+	font-size: var(--normal-font-size);
+	color: var(--white-color);
+	background-color: var(--black-color);
+	height: 100%;
+	line-height: 1;
+}
+
+/*========= REUSABLE CSS CLASSES ==========*/
+.wrapper {
+	min-height: 100%;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+}
+
+._container {
+	max-width: 1440px;
+	margin: 0 auto;
+	padding: 0 20px;
+}
+
+._container-wide {
+	max-width: 1440px;
+	margin: 0 auto;
+}
