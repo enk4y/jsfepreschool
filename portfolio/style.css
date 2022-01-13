@@ -46,7 +46,7 @@ img {
 h1,
 h2,
 h3 {
-	font-weight: bold;
+	font-weight: 700;
 	font-family: var(--title-font);
 }
 
@@ -64,6 +64,10 @@ body {
 	line-height: 1;
 }
 
+button {
+	cursor: pointer;
+}
+
 /*========= REUSABLE CSS CLASSES ==========*/
 .wrapper {
 	min-height: 100%;
@@ -78,9 +82,29 @@ body {
 	padding: 0 20px;
 }
 
-._container-wide {
+._container_small {
 	max-width: 1440px;
 	margin: 0 auto;
+	padding: 0 80px;
+}
+
+.button {
+	width: 220px;
+	height: 55px;
+	background-color: transparent;
+	font-family: var(--body-font);
+	font-size: var(--normal-font-size);
+	color: var(--gold-color);
+	line-height: 200%;
+}
+
+.button_colored {
+	background-color: var(--gold-color);
+	color: var(--black-color);
+}
+
+.button_bordered {
+	border: 2px solid var(--gold-color);
 }
 
 /*========= HEADER ==========*/
@@ -103,14 +127,14 @@ body {
 	width: 50px;
 }
 
-.logo__icon {
+.logo-icon {
 	width: 50px;
 	height: 50px;
 	fill: var(--white-color);
 	transition: 0.3s;
 }
 
-.logo__icon:hover {
+.logo-icon:hover {
 	fill: var(--gold-color);
 }
 
@@ -147,7 +171,7 @@ body {
 	align-items: center;
 }
 
-.header__buttons > span {
+.divider {
 	font-weight: 700;
 	line-height: 250%;
 }
@@ -156,7 +180,6 @@ body {
 	background: none;
 	font-family: var(--body-font);
 	font-size: var(--normal-font-size);
-	color: var(--white-color);
 	line-height: 250%;
 	font-weight: 700;
 }
@@ -167,4 +190,37 @@ body {
 
 .select_default {
 	color: var(--white-color);
+}
+
+/*========= MAIN ==========*/
+.main {
+	flex: 1 1 auto;
+}
+
+/*========= hero ==========*/
+.hero__container {
+	background-image: url('assets/img/header-bg.jpg');
+	background-position: center -90px;
+	background-repeat: no-repeat;
+}
+
+.hero__content {
+	padding: 160px 0px 330px 0px;
+	max-width: 470px;
+}
+
+.hero__title {
+	font-size: var(--h1-font-size);
+	line-height: 200%;
+	margin: 0px 0px 10px 0px;
+}
+
+.hero__text {
+	width: 470px;
+	line-height: 200%;
+	margin: 0px 0px 25px 0px;
+}
+
+/*========= FOOTER ==========*/
+.footer {
 }
