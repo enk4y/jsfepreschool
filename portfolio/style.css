@@ -310,7 +310,6 @@ button {
 }
 
 /*========= portfolio ==========*/
-
 .portfolio__buttons {
 	display: flex;
 	justify-content: center;
@@ -325,6 +324,32 @@ button {
 	flex-wrap: wrap;
 	justify-content: center;
 	align-items: center;
+}
+
+/*========= video ==========*/
+.video-player {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.video-player__button {
+	position: absolute;
+	width: 130px;
+	height: 130px;
+	background-color: transparent;
+}
+
+.video-player-icon {
+	fill: var(--white-color);
+	width: 130px;
+	height: 130px;
+	transition: 0.3s;
+}
+
+.video-player-icon:hover {
+	fill: var(--gold-color);
 }
 
 /*========= FOOTER ==========*/
