@@ -393,5 +393,43 @@ button {
 }
 
 /*========= FOOTER ==========*/
-.footer {
+.footer__row {
+	padding: 50px 0;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.footer__text {
+	min-width: 188px;
+}
+
+.footer__text > span {
+	margin-right: 20px;
+	line-height: 250%;
+}
+
+.footer__caption {
+	line-height: 250%;
+}
+
+.social {
+	width: 188px;
+}
+
+.social__list {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.social-icon {
+	fill: var(--white-color);
+	width: 32px;
+	height: 32px;
+	transition: 0.3s;
+}
+
+.social-icon:hover {
+	fill: var(--gold-color);
 }
