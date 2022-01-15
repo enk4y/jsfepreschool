@@ -68,7 +68,7 @@ button {
 	cursor: pointer;
 }
 
-/*========= REUSABLE CSS CLASSES ==========*/
+/*========= GENERAL CSS CLASSES ==========*/
 .wrapper {
 	min-height: 100%;
 	overflow: hidden;
@@ -88,6 +88,16 @@ button {
 	padding: 0 80px;
 }
 
+.link {
+	color: var(--white-color);
+	line-height: 250%;
+	transition: 0.5s;
+}
+
+.link:hover {
+	color: var(--gold-color);
+}
+
 .button {
 	width: 220px;
 	height: 55px;
@@ -96,6 +106,11 @@ button {
 	font-size: var(--normal-font-size);
 	color: var(--gold-color);
 	line-height: 200%;
+	transition: 0.5s;
+}
+
+.button:hover {
+	color: var(--white-color);
 }
 
 .button_colored {
@@ -111,7 +126,6 @@ button {
 	width: 50%;
 	text-align: center;
 	margin: 0 auto;
-	margin-top: 100px;
 	margin-bottom: 60px;
 	overflow-x: hidden;
 }
@@ -168,6 +182,15 @@ input:-webkit-autofill:active {
 	-webkit-text-fill-color: var(--gold-color);
 	transition: background-color 0s ease-in-out 9000s;
 }
+
+.icon {
+	fill: var(--white-color);
+	transition: 0.5s;
+}
+
+.icon:hover {
+	fill: var(--gold-color);
+}
 /*========= HEADER ==========*/
 .header {
 	width: 100%;
@@ -191,12 +214,6 @@ input:-webkit-autofill:active {
 .logo-icon {
 	width: 50px;
 	height: 50px;
-	fill: var(--white-color);
-	transition: 0.3s;
-}
-
-.logo-icon:hover {
-	fill: var(--gold-color);
 }
 
 /*========= menu ==========*/
@@ -212,16 +229,6 @@ input:-webkit-autofill:active {
 	display: flex;
 	justify-content: space-evenly;
 	align-items: center;
-}
-
-.menu__link {
-	color: var(--white-color);
-	line-height: 250%;
-	transition: 0.3s;
-}
-
-.menu__link:hover {
-	color: var(--gold-color);
 }
 
 /*========= select language ==========*/
@@ -243,6 +250,7 @@ input:-webkit-autofill:active {
 	font-size: var(--normal-font-size);
 	line-height: 250%;
 	font-weight: 700;
+	transition: 0.5s;
 }
 
 .select_colored {
@@ -251,6 +259,10 @@ input:-webkit-autofill:active {
 
 .select_default {
 	color: var(--white-color);
+}
+
+.select_default:hover {
+	color: var(--gold-color);
 }
 
 /*========= MAIN ==========*/
@@ -273,16 +285,19 @@ input:-webkit-autofill:active {
 .hero__title {
 	font-size: var(--h1-font-size);
 	line-height: 200%;
-	margin: 0px 0px 10px 0px;
+	margin-bottom: 10px;
 }
 
 .hero__text {
-	width: 470px;
 	line-height: 200%;
-	margin: 0px 0px 25px 0px;
+	margin-bottom: 25px;
 }
 
 /*========= skills ==========*/
+.skills__container {
+	padding-top: 100px;
+}
+
 .skills__body {
 	display: flex;
 	justify-content: space-between;
@@ -334,6 +349,10 @@ input:-webkit-autofill:active {
 }
 
 /*========= portfolio ==========*/
+.portfolio__container {
+	padding-top: 100px;
+}
+
 .portfolio__buttons {
 	display: flex;
 	justify-content: center;
@@ -351,6 +370,10 @@ input:-webkit-autofill:active {
 }
 
 /*========= video ==========*/
+.video__container {
+	padding-top: 100px;
+}
+
 .video-player {
 	position: relative;
 	display: flex;
@@ -366,18 +389,13 @@ input:-webkit-autofill:active {
 }
 
 .video-player-icon {
-	fill: var(--white-color);
 	width: 130px;
 	height: 130px;
-	transition: 0.3s;
-}
-
-.video-player-icon:hover {
-	fill: var(--gold-color);
 }
 
 /*========= price ==========*/
 .price__container {
+	padding-top: 100px;
 	padding-bottom: 100px;
 }
 
@@ -475,12 +493,8 @@ input:-webkit-autofill:active {
 	min-width: 188px;
 }
 
-.footer__text > span {
+.footer__text > * {
 	margin-right: 20px;
-	line-height: 250%;
-}
-
-.footer__caption {
 	line-height: 250%;
 }
 
@@ -495,12 +509,6 @@ input:-webkit-autofill:active {
 }
 
 .social-icon {
-	fill: var(--white-color);
 	width: 32px;
 	height: 32px;
-	transition: 0.3s;
-}
-
-.social-icon:hover {
-	fill: var(--gold-color);
 }
