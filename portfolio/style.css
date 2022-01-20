@@ -528,6 +528,30 @@ input:-webkit-autofill:active {
 	padding-top: 100px;
 }
 
+@media (max-width: 1024px) {
+	.portfolio__container {
+		padding-top: 90px;
+	}
+}
+
+@media (max-width: 768px) {
+	.portfolio__container {
+		padding-top: 80px;
+	}
+}
+
+@media (max-width: 1024px) {
+	.portfolio__header {
+		margin-bottom: 55px;
+	}
+}
+
+@media (max-width: 768px) {
+	.portfolio__header {
+		margin-bottom: 50px;
+	}
+}
+
 .portfolio__buttons {
 	display: flex;
 	flex-wrap: wrap;
