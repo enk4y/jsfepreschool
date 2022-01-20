@@ -1,5 +1,5 @@
 /*========= GOOGLE FONTS ==========*/
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Merriweather:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Merriweather:wght@400;700&display=swap');
 
 /*========= VARIABLES CSS ==========*/
 :root {
@@ -17,6 +17,18 @@
 	--medium-font-size: 24px;
 	--normal-font-size: 20px;
 	--small-font-size: 18px;
+}
+
+@media (max-width: 1024px) {
+	:root {
+		--h1-font-size: 46px;
+	}
+}
+
+@media (max-width: 768px) {
+	:root {
+		--h1-font-size: 32px;
+	}
 }
 
 /*========= BASE ==========*/
@@ -82,10 +94,38 @@ button {
 	padding: 0 20px;
 }
 
+@media (max-width: 1024px) {
+	._container {
+		max-width: 1024px;
+		padding: 0 40px;
+	}
+}
+
+@media (max-width: 768px) {
+	._container {
+		max-width: 768px;
+		padding: 0 64px 0 60px;
+	}
+}
+
 ._container_small {
 	max-width: 1440px;
 	margin: 0 auto;
 	padding: 0 80px;
+}
+
+@media (max-width: 1024px) {
+	._container_small {
+		max-width: 1024px;
+		padding: 0 40px;
+	}
+}
+
+@media (max-width: 768px) {
+	._container_small {
+		max-width: 768px;
+		padding: 0 64px 0 60px;
+	}
 }
 
 .link {
@@ -191,6 +231,7 @@ input:-webkit-autofill:active {
 .icon:hover {
 	fill: var(--gold-color);
 }
+
 /*========= HEADER ==========*/
 .header {
 	width: 100%;
@@ -203,6 +244,20 @@ input:-webkit-autofill:active {
 	background: url('assets/img/header-bg.jpg');
 	background-repeat: no-repeat;
 	background-position: center 0;
+}
+
+@media (max-width: 1024px) {
+	.header__container {
+		background-position: center -15px;
+		background-size: auto 765px;
+	}
+}
+
+@media (max-width: 768px) {
+	.header__container {
+		background-position: -5px -30px;
+		background-size: auto 620px;
+	}
 }
 
 /*========= logo ==========*/
@@ -277,9 +332,37 @@ input:-webkit-autofill:active {
 	background-repeat: no-repeat;
 }
 
+@media (max-width: 1024px) {
+	.hero__container {
+		background-position: center -105px;
+		background-size: auto 765px;
+	}
+}
+
+@media (max-width: 768px) {
+	.hero__container {
+		background-position: -5px -120px;
+		background-size: auto 620px;
+	}
+}
+
 .hero__content {
 	padding: 160px 0px 330px 0px;
 	max-width: 470px;
+}
+
+@media (max-width: 1024px) {
+	.hero__content {
+		padding: 160px 0px 330px 0px;
+		max-width: 440px;
+	}
+}
+
+@media (max-width: 768px) {
+	.hero__content {
+		padding: 78px 0px 152px 0px;
+		max-width: 390px;
+	}
 }
 
 .hero__title {
@@ -288,9 +371,36 @@ input:-webkit-autofill:active {
 	margin-bottom: 10px;
 }
 
+@media (max-width: 1024px) {
+	.hero__title {
+		font-weight: 400;
+		margin-bottom: 15px;
+	}
+}
+
+@media (max-width: 768px) {
+	.hero__title {
+		margin-bottom: 20px;
+	}
+}
+
 .hero__text {
 	line-height: 200%;
 	margin-bottom: 25px;
+}
+
+@media (max-width: 1024px) {
+	.hero__text {
+		line-height: 160%;
+		margin-bottom: 40px;
+	}
+}
+
+@media (max-width: 768px) {
+	.hero__text {
+		line-height: 120%;
+		margin-bottom: 60px;
+	}
 }
 
 /*========= skills ==========*/
