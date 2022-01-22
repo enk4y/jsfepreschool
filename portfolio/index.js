@@ -1,36 +1,21 @@
-console.log(
-	'Score: 110 / 110\n' +
-		'- Вёрстка валидная (10)\n' +
-		'- Вёрстка семантическая (20)\n' +
-		'- [x] <header>, <main>, <footer> (2)\n' +
-		'- [x] шесть элементов <section> (по количеству секций) (2)\n' +
-		'- [x] только один заголовок <h1> (2)\n' +
-		'- [x] пять заголовков <h2> (2)\n' +
-		'- [x] один элемент <nav> (2)\n' +
-		'- [x] два списка ul > li > a (2)\n' +
-		'- [x] десять кнопок <button> (2)\n' +
-		'- [x] два инпута: <input type="email"> и <input type="tel"> (2)\n' +
-		'- [x] один элемент <textarea> (2)\n' +
-		'- [x] три атрибута placeholder (2)\n' +
-		'Вёрстка соответствует макету (48)\n' +
-		'- [x] блок <header> (6)\n' +
-		'- [x] секция hero (6)\n' +
-		'- [x] секция skills (6)\n' +
-		'- [x] секция portfolio (6)\n' +
-		'- [x] секция video (6)\n' +
-		'- [x] секция price (6)\n' +
-		'- [x] секция contacts (6)\n' +
-		'- [x] блок <footer> (6)\n' +
-		'Требования к css (12)\n' +
-		'- [x] для построения сетки используются флексы или гриды (2)\n' +
-		'- [x] при уменьшении масштаба страницы браузера вёрстка размещается по центру, а не сдвигается в сторону (2)\n' +
-		'- [x] фоновый цвет тянется на всю ширину страницы (2)\n' +
-		'- [x] иконки добавлены в формате .svg (2)\n' +
-		'- [x] изображения добавлены в формате .jpg (2)\n' +
-		'- [x] есть favicon (2)\n' +
-		'Интерактивность, реализуемая через css (20)\n' +
-		'- [x] плавная прокрутка по якорям (5)\n' +
-		'- [x] ссылки в футере ведут на гитхаб автора проекта и на страницу курса (5)\n' +
-		'- [x] интерактивность включает в себя не только изменение внешнего вида курсора (5)\n' +
-		'- [x] обязательное требование к интерактивности: плавное изменение внешнего вида элемента при наведении и клике не влияющее на соседние элементы (5)'
-);
+(function () {
+	const iconMenu = document.querySelector('.menu__icon');
+	const menu = document.querySelector('.menu');
+	const menuLinks = document.querySelectorAll('.menu__link');
+
+	iconMenu.addEventListener('click', () => {
+		document.body.classList.toggle('_lock');
+		iconMenu.classList.toggle('_active');
+		menu.classList.toggle('_active');
+		menu.classList.toggle('menu-open');
+	});
+
+	for (let i = 0; i < menuLinks.length; i++) {
+		menuLinks[i].addEventListener('click', () => {
+			iconMenu.classList.remove('_active');
+			document.body.classList.remove('_lock');
+			menu.classList.remove('_active');
+			menu.classList.remove('menu-open');
+		});
+	}
+})();
