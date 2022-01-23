@@ -828,6 +828,36 @@ input:-webkit-autofill:active {
 		max-width: 420px;
 		margin: 0 auto;
 	}
+
+	/*========= contacts ==========*/
+	.contacts__container {
+		height: 600px;
+		background-size: auto 600px;
+	}
+
+	.contacts__row {
+		justify-content: center;
+	}
+
+	.contacts__content {
+		padding-top: 60px;
+		margin-left: 4px;
+		max-width: 450px;
+	}
+
+	.contacts__title {
+		padding: 0;
+		line-height: 200%;
+		text-align: center;
+	}
+
+	.contacts__form {
+		align-items: center;
+	}
+
+	.form__input {
+		width: 100%;
+	}
 }
 
 @media (max-width: 640px) {
