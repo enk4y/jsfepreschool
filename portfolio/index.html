@@ -43,6 +43,9 @@
 					<span class="divider">/</span>
 					<button class="select select_default">ru</button>
 				</div>
+				<div class="menu__icon">
+					<span></span>
+				</div>
 			</div>
 		</header>
 		<main class="main">
@@ -64,29 +67,37 @@
 						<h2 class="header-block__title">Skills</h2>
 					</div>
 					<div class="skills__body">
-						<div class="skills__item">
-							<h3 class="skills__subtitle">Digital photography</h3>
-							<p class="skills__description">
-								High-quality photos in the studio and on the nature
-							</p>
+						<div class="skills__column">
+							<div class="skills__item">
+								<h3 class="skills__subtitle">Digital photography</h3>
+								<p class="skills__description">
+									High-quality photos in the studio and on the nature
+								</p>
+							</div>
 						</div>
-						<div class="skills__item">
-							<h3 class="skills__subtitle">Video shooting</h3>
-							<p class="skills__description">
-								Capture your moments so that they always stay with you
-							</p>
+						<div class="skills__column">
+							<div class="skills__item">
+								<h3 class="skills__subtitle">Video shooting</h3>
+								<p class="skills__description">
+									Capture your moments so that they always stay with you
+								</p>
+							</div>
 						</div>
-						<div class="skills__item">
-							<h3 class="skills__subtitle">Retouch</h3>
-							<p class="skills__description">
-								I strive to make photography surpass reality
-							</p>
+						<div class="skills__column">
+							<div class="skills__item">
+								<h3 class="skills__subtitle">Retouch</h3>
+								<p class="skills__description">
+									I strive to make photography surpass reality
+								</p>
+							</div>
 						</div>
-						<div class="skills__item">
-							<h3 class="skills__subtitle">Audio</h3>
-							<p class="skills__description">
-								Professional sounds recording for video, advertising, portfolio
-							</p>
+						<div class="skills__column">
+							<div class="skills__item">
+								<h3 class="skills__subtitle">Audio</h3>
+								<p class="skills__description">
+									Professional sounds recording for video, advertising, portfolio
+								</p>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -120,7 +131,11 @@
 						<h2 class="header-block__title">Video</h2>
 					</div>
 					<div class="video__body video-player">
-						<img class="video-player__img" src="assets/img/video-player.jpg" alt="video-player">
+						<picture>
+							<source srcset="assets/img/video-player-768.jpg" class="video-player__img"
+								media="(max-width: 768px)" />
+							<img src="assets/img/video-player.jpg" alt="video-player" class="video-player__img" />
+						</picture>
 						<button class="video-player__button">
 							<svg class="video-player-icon icon">
 								<use xlink:href="assets/svg/sprite.svg#play"></use>
@@ -135,41 +150,47 @@
 						<h2 class="header-block__title">Price</h2>
 					</div>
 					<div class="price__body">
-						<div class="price__item">
-							<h3 class="price__subtitle">Standard</h3>
-							<span class="price__value">500 $</span>
-							<div class="price__data">
-								<span class="price__description">One location</span>
-								<span class="price__description">120 photos in color</span>
-								<span class="price__description">12 photos in retouch</span>
-								<span class="price__description">Readiness 2-3 weeks</span>
-								<span class="price__description">Make up, visage</span>
+						<div class="price__column">
+							<div class="price__item">
+								<h3 class="price__subtitle">Standard</h3>
+								<span class="price__value">500 $</span>
+								<div class="price__data">
+									<span class="price__description">One location</span>
+									<span class="price__description">120 photos in color</span>
+									<span class="price__description">12 photos in retouch</span>
+									<span class="price__description">Readiness 2-3 weeks</span>
+									<span class="price__description">Make up, visage</span>
+								</div>
+								<button class="button button_colored">Order shooting</button>
 							</div>
-							<button class="button button_colored">Order shooting</button>
 						</div>
-						<div class="price__item">
-							<h3 class="price__subtitle">Premium</h3>
-							<span class="price__value">700 $</span>
-							<div class="price__data">
-								<span class="price__description">One or two locations</span>
-								<span class="price__description">200 photos in color</span>
-								<span class="price__description">20 photos in retouch</span>
-								<span class="price__description">Readiness 1-2 weeks</span>
-								<span class="price__description">Make up, visage</span>
+						<div class="price__column">
+							<div class="price__item">
+								<h3 class="price__subtitle">Premium</h3>
+								<span class="price__value">700 $</span>
+								<div class="price__data">
+									<span class="price__description">One or two locations</span>
+									<span class="price__description">200 photos in color</span>
+									<span class="price__description">20 photos in retouch</span>
+									<span class="price__description">Readiness 1-2 weeks</span>
+									<span class="price__description">Make up, visage</span>
+								</div>
+								<button class="button button_colored">Order shooting</button>
 							</div>
-							<button class="button button_colored">Order shooting</button>
 						</div>
-						<div class="price__item">
-							<h3 class="price__subtitle">Gold</h3>
-							<span class="price__value">1000 $</span>
-							<div class="price__data">
-								<span class="price__description">Three locations or more</span>
-								<span class="price__description">300 photos in color</span>
-								<span class="price__description">50 photos in retouch</span>
-								<span class="price__description">Readiness 1 week</span>
-								<span class="price__description">Make up, visage, hairstyle</span>
+						<div class="price__column">
+							<div class="price__item">
+								<h3 class="price__subtitle">Gold</h3>
+								<span class="price__value">1000 $</span>
+								<div class="price__data">
+									<span class="price__description">Three locations or more</span>
+									<span class="price__description">300 photos in color</span>
+									<span class="price__description">50 photos in retouch</span>
+									<span class="price__description">Readiness 1 week</span>
+									<span class="price__description">Make up, visage, hairstyle</span>
+								</div>
+								<button class="button button_colored">Order shooting</button>
 							</div>
-							<button class="button button_colored">Order shooting</button>
 						</div>
 					</div>
 				</div>
