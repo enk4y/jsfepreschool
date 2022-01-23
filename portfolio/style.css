@@ -887,6 +887,7 @@ input:-webkit-autofill:active {
 	}
 }
 
+/*========= MEDIA 640px==========*/
 @media (max-width: 640px) {
 	.skills__column {
 		flex: 0 1 100%;
@@ -898,7 +899,41 @@ input:-webkit-autofill:active {
 	}
 }
 
-@media (max-width: 425px) {
+/*========= MEDIA 424px==========*/
+@media (max-width: 424px) {
+	._container {
+		max-width: 425px;
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+
+	._container_small {
+		max-width: 425px;
+		padding: 0 10px;
+	}
+
+	.skills__container {
+		padding-top: 40px;
+		padding-bottom: 20px;
+	}
+
+	.portfolio__container {
+		padding-top: 40px;
+	}
+
+	.video__container {
+		padding-top: 40px;
+	}
+
+	.price__container {
+		padding-top: 40px;
+		padding-bottom: 20px;
+	}
+
+	.header-block {
+		margin-bottom: 20px;
+	}
+
 	.header-block__title::before,
 	.header-block__title::after {
 		display: none;
