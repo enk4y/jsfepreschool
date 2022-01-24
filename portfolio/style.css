@@ -695,7 +695,7 @@ input:-webkit-autofill:active {
 	}
 
 	.menu {
-		width: 80.7%;
+		width: 620px;
 		height: 100%;
 		position: fixed;
 		top: 0px;
@@ -947,6 +947,10 @@ input:-webkit-autofill:active {
 
 	.video__container {
 		padding-top: 40px;
+	}
+
+	.video__body {
+		margin: 0px -10px;
 	}
 
 	.price__container {
