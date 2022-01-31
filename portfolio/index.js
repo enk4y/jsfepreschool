@@ -38,6 +38,20 @@ function changeImage(event) {
 	}
 }
 
+/*========= Preload images ==========*/
+const seasons = ['winter', 'spring', 'summer', 'autumn'];
+
+preloadImages();
+
+function preloadImages() {
+	for (let i = 1; i <= 6; i++) {
+		seasons.forEach((value) => {
+			const img = new Image();
+			img.src = `./assets/img/${value}/${i}.jpg`;
+		});
+	}
+}
+
 console.log(
 	'Score: 85 / 85\n' +
 		'- Вёрстка соответствует макету. Ширина экрана 768px (48)\n' +
