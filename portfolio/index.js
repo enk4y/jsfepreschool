@@ -93,6 +93,75 @@ function getTranslate(lang) {
 	});
 }
 
+/*========= Change theme ==========*/
+const changeThemeButton = document.querySelector('.change-theme');
+const changeThemeIcon = document.querySelector('.change-theme__link');
+const lightTheme = 'light-theme';
+const iconTheme = 'moon';
+
+const selectedTheme = localStorage.getItem('theme');
+const selectedIcon = localStorage.getItem('themeIcon');
+
+const getCurrentTheme = () => {
+	return document.body.classList.contains(lightTheme)
+		? 'light-theme'
+		: 'dark-theme';
+};
+
+const getCurrentIcon = () => {
+	return changeThemeIcon.classList.contains(iconTheme) ? 'moon' : 'sun';
+};
+
+if (selectedTheme) {
+	document.body.classList[selectedTheme === 'light-theme' ? 'add' : 'remove'](
+		lightTheme
+	);
+	if (document.body.classList.contains(lightTheme)) {
+		changeImagesTheme('.hero__container', 'header-bg-light');
+		changeImagesTheme('.header__container', 'header-bg-light');
+		changeImagesTheme('.contacts__container', 'contacts-bg-light');
+	}
+
+	changeThemeIcon.classList[selectedIcon === 'moon' ? 'add' : 'remove'](
+		selectedIcon
+	);
+	if (changeThemeIcon.classList.contains('moon')) {
+		changeThemeIcon.setAttribute('xlink:href', 'assets/svg/sprite.svg#moon');
+	}
+}
+
+changeThemeButton.addEventListener('click', changeTheme);
+
+function changeTheme(event) {
+	document.body.classList.toggle(lightTheme);
+	changeThemeIcon.classList.toggle(iconTheme);
+
+	if (document.body.classList.contains(lightTheme)) {
+		changeImagesTheme('.hero__container', 'header-bg-light');
+		changeImagesTheme('.header__container', 'header-bg-light');
+		changeImagesTheme('.contacts__container', 'contacts-bg-light');
+	} else {
+		changeImagesTheme('.hero__container', 'header-bg');
+		changeImagesTheme('.header__container', 'header-bg');
+		changeImagesTheme('.contacts__container', 'contacts-bg');
+	}
+
+	if (changeThemeIcon.classList.contains('moon')) {
+		changeThemeIcon.setAttribute('xlink:href', 'assets/svg/sprite.svg#moon');
+	} else {
+		changeThemeIcon.setAttribute('xlink:href', 'assets/svg/sprite.svg#sun');
+	}
+
+	localStorage.setItem('theme', getCurrentTheme());
+	localStorage.setItem('themeIcon', getCurrentIcon());
+}
+
+function changeImagesTheme(container, img) {
+	document.body.querySelector(
+		container
+	).style.backgroundImage = `url(assets/img/${img}.jpg)`;
+}
+
 console.log(
 	'Score: 85 / 85\n' +
 		'- Вёрстка соответствует макету. Ширина экрана 768px (48)\n' +
