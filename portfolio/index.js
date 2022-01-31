@@ -20,6 +20,24 @@
 	}
 })();
 
+/*========= Change images ==========*/
+const portfolioButtonsContainer = document.querySelector('.portfolio__buttons');
+const portfolioImages = document.querySelectorAll('.portfolio__img');
+const portfolioButtons = document.querySelectorAll('.portfolio__button');
+const selectButtons = document.querySelectorAll('.select');
+
+portfolioButtonsContainer.addEventListener('click', changeImage);
+
+function changeImage(event) {
+	if (event.target.classList.contains('portfolio__button')) {
+		removeActiveStyles('button_colored', portfolioButtons);
+		event.target.classList.add('button_colored');
+		portfolioImages.forEach((image, index) => {
+			image.src = `assets/img/${event.target.dataset.season}/${index + 1}.jpg`;
+		});
+	}
+}
+
 console.log(
 	'Score: 85 / 85\n' +
 		'- Вёрстка соответствует макету. Ширина экрана 768px (48)\n' +
