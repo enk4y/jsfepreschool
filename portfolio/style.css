@@ -4,9 +4,54 @@
 /*========= VARIABLES CSS ==========*/
 :root {
 	/*========= Colors ==========*/
-	--white-color: #ffffff;
-	--gold-color: #bdae82;
-	--black-color: #000000;
+	--color-white: #ffffff;
+	--color-gold: #bdae82;
+	--color-black-1: #000000;
+	--color-black-2: #1c1c1c;
+	--color-black-opacity-50: rgba(0, 0, 0, 0.5);
+	--color-white-opacity-50: rgba(255, 255, 255, 0.5);
+
+	--body-color: var(--color-black-1);
+	--text-color: var(--color-white);
+	--hover-color: var(--color-gold);
+
+	--color-text-link: var(--color-gold);
+	--color-text-link-hover: var(--color-white);
+
+	--color-text-section-header: var(--color-gold);
+
+	--color-text-button: var(--color-black-1);
+	--color-background-text-button: var(--color-gold);
+	--color-text-button-hover: var(--color-white);
+	--color-background-text-button-hover: var(--color-gold);
+
+	--color-text-button-secondary: var(--color-gold);
+	--color-background-text-button-secondary: var(--color-black-1);
+	--color-text-button-secondary-border: var(--color-gold);
+	--color-text-button-secondary-hover: var(--color-white);
+	--color-background-text-button-secondary-hover: var(--color-gold);
+	--color-text-button-secondary-border-hover: var(--color-gold);
+
+	--color-text-button-active: var(--color-black-1);
+	--color-background-text-button-active: var(--color-gold);
+	--color-text-button-active-border: var(--color-gold);
+	--color-text-button-active-hover: var(--color-white);
+	--color-background-text-button-active-hover: var(--color-gold);
+	--color-text-button-active-border-hover: var(--color-gold);
+
+	--color-text-button-price: var(--color-black-1);
+	--color-background-text-button-price: var(--color-gold);
+	--color-text-button-price-hover: var(--color-white);
+	--color-background-text-button-price-hover: var(--color-gold);
+
+	--color-button-play: var(--color-white);
+
+	--color-text-price-value: var(--color-gold);
+	--color-text-price-value-2: var(--color-gold);
+
+	--color-input: var(--color-gold);
+	--color-background-input: var(--color-black-opacity-50);
+	--color-border-input: var(--color-gold);
 
 	/*========= Font and typography ==========*/
 	--body-font: 'Inter', sans-serif;
@@ -17,6 +62,51 @@
 	--medium-font-size: 24px;
 	--normal-font-size: 20px;
 	--small-font-size: 18px;
+}
+
+/*========= VARIABLES theme ==========*/
+body.light-theme {
+	--body-color: var(--color-white);
+	--text-color: var(--color-black-2);
+	--hover-color: var(--color-gold);
+
+	--color-text-link: var(--color-black-2);
+	--color-text-link-hover: var(--color-white);
+
+	--color-text-section-header: var(--color-black-2);
+
+	--color-text-button: var(--color-black-2);
+	--color-background-text-button: var(--color-white);
+	--color-text-button-hover: var(--color-gold);
+	--color-background-text-button-hover: var(--color-black-2);
+
+	--color-text-button-secondary: var(--color-black-2);
+	--color-background-text-button-secondary: var(--color-gold);
+	--color-text-button-secondary-border: var(--color-gold);
+	--color-text-button-secondary-hover: var(--color-gold);
+	--color-background-text-button-secondary-hover: var(--color-black-2);
+	--color-text-button-secondary-border-hover: var(--color-gold);
+
+	--color-text-button-active: var(--color-gold);
+	--color-background-text-button-active: var(--color-black-2);
+	--color-text-button-active-border: var(--color-gold);
+	--color-text-button-active-hover: var(--color-white);
+	--color-background-text-button-active-hover: var(--color-black-2);
+	--color-text-button-active-border-hover: var(--color-gold);
+
+	--color-text-button-price: var(--color-black-2);
+	--color-background-text-button-price: var(--color-gold);
+	--color-text-button-price-hover: var(--color-gold);
+	--color-background-text-button-price-hover: var(--color-black-2);
+
+	--color-button-play: var(--color-white);
+
+	--color-text-price-value: var(--color-black-2);
+	--color-text-price-value-2: var(--color-gold);
+
+	--color-input: var(--color-black-2);
+	--color-background-input: var(--color-white-opacity-50);
+	--color-border-input: var(--color-gold);
 }
 
 /*========= BASE ==========*/
@@ -58,8 +148,8 @@ body {
 	font-family: var(--body-font);
 	font-size: var(--normal-font-size);
 	font-weight: 400;
-	color: var(--white-color);
-	background-color: var(--black-color);
+	color: var(--text-color);
+	background-color: var(--body-color);
 	height: 100%;
 	line-height: 1;
 }
@@ -97,37 +187,73 @@ button {
 }
 
 .link {
-	color: var(--white-color);
+	color: var(--text-color);
 	line-height: 250%;
 	transition: 0.5s;
 }
 
 .link:hover {
-	color: var(--gold-color);
+	color: var(--hover-color);
 }
 
 .button {
 	width: 220px;
 	height: 55px;
-	background-color: transparent;
 	font-family: var(--body-font);
 	font-size: var(--normal-font-size);
-	color: var(--gold-color);
 	line-height: 200%;
 	transition: 0.5s;
+	color: var(--color-text-button);
+	background-color: var(--color-background-text-button);
 }
 
 .button:hover {
-	color: var(--white-color);
+	color: var(--color-text-button-hover);
+	background-color: var(--color-background-text-button-hover);
+	box-shadow: 0 0.5em 0.5em -0.4em var(--color-background-text-button-hover);
+	border-radius: 10px;
+	transform: translateY(-0.65em);
+}
+
+.button:active {
+	box-shadow: none;
+}
+
+.portfolio__button {
+	color: var(--color-text-button-secondary);
+	background-color: var(--color-background-text-button-secondary);
+	border: 2px solid var(--color-text-button-secondary-border);
+	transition: 0.5s;
+}
+
+.portfolio__button:hover {
+	color: var(--color-text-button-secondary-hover);
+	box-shadow: inset 0 0 0 2em
+		var(--color-background-text-button-secondary-hover);
+	transform: none;
+	transition: 0.5s;
+}
+
+.price__button {
+	color: var(--color-text-button-price);
+	background-color: var(--color-background-text-button-price);
+}
+
+.price__button:hover {
+	color: var(--color-text-button-price-hover);
+	background-color: var(--color-background-text-button-price-hover);
 }
 
 .button_colored {
-	background-color: var(--gold-color);
-	color: var(--black-color);
+	color: var(--color-text-button-active);
+	background-color: var(--color-background-text-button-active);
+	border: 2px solid var(--color-text-button-active-border);
 }
 
-.button_bordered {
-	border: 2px solid var(--gold-color);
+.button_colored:hover {
+	color: var(--color-text-button-active-hover);
+	background-color: var(--color-background-text-button-active-hover);
+	border: 2px solid var(--color-text-button-active-border-hover);
 }
 
 .header-block {
@@ -141,13 +267,13 @@ button {
 .header-block__title {
 	font-size: var(--h2-font-size);
 	line-height: 200%;
-	color: var(--gold-color);
+	color: var(--color-text-section-header);
 }
 
 .header-block__title::before,
 .header-block__title::after {
 	content: '';
-	background: var(--gold-color);
+	background: var(--color-text-section-header);
 	display: inline-block;
 	height: 2px;
 	position: relative;
@@ -167,18 +293,18 @@ button {
 }
 
 .form__input {
-	border: 2px solid var(--gold-color);
+	border: 2px solid var(--color-border-input);
 	font-family: var(--body-font);
 	font-size: var(--normal-font-size);
 	line-height: 200%;
-	background: rgba(0, 0, 0, 0.5);
-	color: var(--gold-color);
+	background-color: var(--color-background-input);
+	color: var(--color-input);
 	padding: 3px 18px;
 }
 
 ::placeholder {
 	font-family: var(--body-font);
-	color: var(--gold-color);
+	color: var(--color-input);
 	font-size: var(--normal-font-size);
 	line-height: 200%;
 }
@@ -187,17 +313,17 @@ input:-webkit-autofill,
 input:-webkit-autofill:hover,
 input:-webkit-autofill:focus,
 input:-webkit-autofill:active {
-	-webkit-text-fill-color: var(--gold-color);
+	-webkit-text-fill-color: var(--color-input);
 	transition: background-color 0s ease-in-out 9000s;
 }
 
 .icon {
-	fill: var(--white-color);
+	fill: var(--text-color);
 	transition: 0.5s;
 }
 
 .icon:hover {
-	fill: var(--gold-color);
+	fill: var(--hover-color);
 }
 
 /*========= HEADER ==========*/
@@ -212,6 +338,7 @@ input:-webkit-autofill:active {
 	background: url('assets/img/header-bg.jpg');
 	background-repeat: no-repeat;
 	background-position: center 0;
+	transition: background-image 0.3s;
 }
 
 /*========= logo ==========*/
@@ -245,9 +372,9 @@ input:-webkit-autofill:active {
 	display: none;
 }
 
-/*========= select language ==========*/
+/*========= header buttons ==========*/
 .header__buttons {
-	width: 70px;
+	width: 170px;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -265,18 +392,28 @@ input:-webkit-autofill:active {
 	line-height: 250%;
 	font-weight: 700;
 	transition: 0.5s;
+	color: var(--color-text-link);
+	text-transform: uppercase;
+}
+
+.select:hover {
+	color: var(--color-text-link-hover);
 }
 
 .select_colored {
-	color: var(--gold-color);
+	color: var(--color-text-link-hover);
 }
 
-.select_default {
-	color: var(--white-color);
+.change-theme {
+	background: none;
+	margin-left: 30px;
+	width: 45px;
+	height: 45px;
 }
 
-.select_default:hover {
-	color: var(--gold-color);
+.change-theme-icon {
+	width: 45px;
+	height: 45px;
 }
 
 /*========= MAIN ==========*/
@@ -289,6 +426,7 @@ input:-webkit-autofill:active {
 	background-image: url('assets/img/header-bg.jpg');
 	background-position: center -90px;
 	background-repeat: no-repeat;
+	transition: background-image 0.3s;
 }
 
 .hero__content {
@@ -413,12 +551,13 @@ input:-webkit-autofill:active {
 	position: absolute;
 	width: 130px;
 	height: 130px;
-	background-color: transparent;
+	background: none;
 }
 
 .video-player-icon {
 	width: 130px;
 	height: 130px;
+	fill: var(--color-button-play);
 }
 
 /*========= price ==========*/
@@ -442,7 +581,7 @@ input:-webkit-autofill:active {
 
 .price__item {
 	max-width: 450px;
-	border: 3px solid var(--gold-color);
+	border: 3px solid var(--hover-color);
 	text-align: center;
 	padding: 40px 0px;
 }
@@ -459,8 +598,12 @@ input:-webkit-autofill:active {
 	font-weight: 700;
 	font-size: var(--medium-font-size);
 	line-height: 200%;
-	color: var(--gold-color);
+	color: var(--color-text-price-value);
 	margin-bottom: 20px;
+}
+
+.max-price {
+	color: var(--color-text-price-value-2);
 }
 
 .price__data {
@@ -614,17 +757,7 @@ input:-webkit-autofill:active {
 
 	.header__buttons {
 		margin-left: auto;
-		margin-right: 20px;
-		width: 82px;
-		justify-content: flex-start;
-	}
-
-	.select:first-child {
-		margin-right: 9px;
-	}
-
-	.divider {
-		margin-right: 19px;
+		margin-right: 30px;
 	}
 
 	.menu__icon {
@@ -644,16 +777,16 @@ input:-webkit-autofill:active {
 		width: 100%;
 		height: 3px;
 		transition: all 0.3s ease 0s;
-		background-color: var(--white-color);
+		background-color: var(--text-color);
 	}
 
 	.menu__icon:hover span {
-		background-color: var(--gold-color);
+		background-color: var(--hover-color);
 	}
 
 	.menu__icon:hover::before,
 	.menu__icon:hover::after {
-		background-color: var(--gold-color);
+		background-color: var(--hover-color);
 	}
 
 	.menu__icon::before,
@@ -700,7 +833,7 @@ input:-webkit-autofill:active {
 		position: fixed;
 		top: 0px;
 		right: 0px;
-		background-color: var(--black-color);
+		background-color: var(--body-color);
 		z-index: 10;
 		padding: 134px 127px;
 		transform: translateX(100%);
@@ -720,7 +853,9 @@ input:-webkit-autofill:active {
 	}
 
 	.menu__link {
-		font-size: 35px;
+		font-family: var(--title-font);
+		font-weight: 700;
+		font-size: 40px;
 		line-height: 73px;
 	}
 
@@ -921,6 +1056,10 @@ input:-webkit-autofill:active {
 	.header-block {
 		width: 80%;
 	}
+
+	.header__buttons {
+		width: 145px;
+	}
 }
 
 /*========= MEDIA 424px==========*/
@@ -970,14 +1109,25 @@ input:-webkit-autofill:active {
 		padding-left: 0;
 		padding-right: 0;
 	}
+
+	.header-block__title::before {
+		right: 10px;
+	}
+
+	.header-block__title::after {
+		left: 10px;
+	}
 }
 
 @media (max-width: 374px) {
 	.header__buttons {
+		width: 135px;
 		margin-left: auto;
 		margin-right: 20px;
-		width: 60px;
-		justify-content: space-between;
+	}
+
+	.header__buttons > .change-theme {
+		margin-left: 10px;
 	}
 
 	.select:first-child {
