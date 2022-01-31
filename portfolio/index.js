@@ -1,3 +1,5 @@
+import i18Obj from './assets/js/translate.js';
+
 (function () {
 	const iconMenu = document.querySelector('.menu__icon');
 	const menu = document.querySelector('.menu');
@@ -50,6 +52,45 @@ function preloadImages() {
 			img.src = `./assets/img/${value}/${i}.jpg`;
 		});
 	}
+}
+
+/*========= Change languages ==========*/
+const headerButtons = document.querySelector('.header__buttons');
+const changeLangButtons = document.querySelectorAll('.select');
+const selectedLanguage = localStorage.getItem('language');
+
+if (selectedLanguage) {
+	console.log(changeLangButtons);
+	changeLangButtons.forEach((button) => {
+		button.dataset.lang === selectedLanguage
+			? button.classList.add('select_colored')
+			: button.classList.remove('select_colored');
+	});
+
+	getTranslate(selectedLanguage);
+}
+
+headerButtons.addEventListener('click', changeLanguage);
+
+function changeLanguage(event) {
+	if (event.target.classList.contains('select')) {
+		removeActiveStyles('select_colored', selectButtons);
+		event.target.classList.add('select_colored');
+		getTranslate(event.target.dataset.lang);
+		localStorage.setItem('language', event.target.dataset.lang);
+	}
+}
+
+function getTranslate(lang) {
+	const textElementsArray = document.querySelectorAll('[data-i18]');
+	textElementsArray.forEach((element) => {
+		if (element.placeholder) {
+			element.placeholder = i18Obj[lang][element.dataset.i18];
+			element.textContent = '';
+		} else if (element.dataset.i18 != i18Obj[lang][element.dataset.i18]) {
+			element.textContent = i18Obj[lang][element.dataset.i18];
+		}
+	});
 }
 
 console.log(
