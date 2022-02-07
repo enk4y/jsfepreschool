@@ -156,7 +156,8 @@ body {
 .play-pause:hover,
 .next-track:hover,
 .previous-track:hover {
-	opacity: 0.75;
+	opacity: 0.5;
+	transform: scale(1.1);
 }
 
 .player__progress {
@@ -201,4 +202,50 @@ body {
 	font-size: 13px;
 	color: white;
 	align-self: start;
+}
+
+.footer {
+	height: 80px;
+	margin-top: -80px;
+	overflow: hidden;
+}
+
+.footer__container {
+	padding: 5px 28px 5px 28px;
+	background: transparent;
+}
+
+.footer__row {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.footer__git {
+	width: 120px;
+	text-align: center;
+}
+
+.git__link {
+	color: #ffffff;
+}
+
+.git__link:hover {
+	color: rgb(193, 255, 6);
+}
+
+.footer__text {
+	font-weight: 700;
+	font-size: 25px;
+	line-height: 30px;
+	letter-spacing: 2px;
+	color: #ffffff;
+}
+
+.footer_logo {
+	flex: 0 0 120px;
+}
+
+.footer_logo img {
+	max-width: 100%;
 }
