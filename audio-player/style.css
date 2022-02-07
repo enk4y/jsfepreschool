@@ -104,13 +104,14 @@ body {
 		rgb(50, 50, 50),
 		rgb(133, 133, 133)
 	);
+	padding: 0 30px;
 }
 
 .player__data {
+	align-self: stretch;
 	display: flex;
+	justify-content: space-between;
 	align-items: center;
-	justify-content: center;
-	gap: 15px;
 }
 
 .play-pause {
@@ -124,8 +125,6 @@ body {
 .player__info {
 	display: flex;
 	flex-direction: column;
-	justify-content: center;
-	align-items: flex-start;
 	gap: 5px;
 }
 
