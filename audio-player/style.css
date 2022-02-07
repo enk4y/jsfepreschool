@@ -88,7 +88,7 @@ body {
 .track-thumbnail {
 	max-width: 100%;
 	margin-top: -23px;
-	transition: 1s;
+	transition: 0.3s;
 	transform: scale(1.03);
 }
 
@@ -99,11 +99,7 @@ body {
 	justify-content: flex-end;
 	gap: 10px;
 	flex: 1;
-	background: -webkit-linear-gradient(
-		45deg,
-		rgb(50, 50, 50),
-		rgb(133, 133, 133)
-	);
+	background: linear-gradient(45deg, rgb(50, 50, 50), rgb(133, 133, 133));
 	padding: 0 30px;
 }
 

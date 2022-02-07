@@ -16,6 +16,12 @@ let isPlay = false;
 let playNum = 0;
 let updateTimer;
 
+let context;
+let analyzer;
+let source;
+let array;
+const playerContainerStyle = document.querySelector('.player__container').style;
+
 const trackList = [
 	{
 		title: "Don't Hurt Yourself",
@@ -28,6 +34,12 @@ const trackList = [
 		artist: 'Dua Lipa',
 		image: 'assets/img/dontstartnow.png',
 		path: 'assets/audio/dontstartnow.mp3',
+	},
+	{
+		title: 'The Unforgiven',
+		artist: 'Metallica',
+		image: 'assets/img/unforgiven.jpg',
+		path: 'assets/audio/unforgiven.mp3',
 	},
 ];
 
@@ -50,13 +62,20 @@ function loadTrack(trackIndex) {
 }
 
 function playPauseTrack() {
+	if (!context) {
+		preparation();
+	}
 	if (!isPlay) playTrack();
 	else pauseTrack();
 }
 
 function playTrack() {
+	if (!context) {
+		preparation();
+	}
 	track.play();
 	isPlay = true;
+	loop();
 
 	playPauseButton.src = 'assets/icons/pause.png';
 	trackThumbnail.style.transform = 'scale(1.15)';
@@ -112,4 +131,22 @@ function formatTime(seconds) {
 
 function changeProgressValue() {
 	track.currentTime = audioSlider.value;
+}
+
+function preparation() {
+	context = new AudioContext();
+	analyzer = context.createAnalyser();
+	source = context.createMediaElementSource(track);
+	source.connect(analyzer);
+	analyzer.connect(context.destination);
+	loop();
+}
+
+function loop() {
+	if (isPlay) {
+		window.requestAnimationFrame(loop);
+	}
+	array = new Uint8Array(analyzer.frequencyBinCount);
+	analyzer.getByteFrequencyData(array);
+	playerContainerStyle.boxShadow = ` 0 0 ${array[40] - 100}px rgb(193, 255, 6)`;
 }
