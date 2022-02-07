@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 
-/*========= BASE ==========*/
 *,
 *::before,
 *::after {
@@ -29,16 +28,182 @@ h2 {
 	font-weight: 700;
 }
 
+button {
+	cursor: pointer;
+}
+
 html {
 	scroll-behavior: smooth;
 }
 
 body {
+	font-family: 'Montserrat', sans-serif;
 	font-weight: 400;
-	height: 100%;
+	height: 100vh;
 	line-height: 1;
+	color: #ffffff;
+	background: #000000;
 }
 
-button {
+.wrapper {
+	min-height: 100vh;
+	overflow: hidden;
+}
+
+.player__background {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	filter: blur(10px);
+	z-index: -1;
+}
+
+.player {
+	min-height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.player__container {
+	height: 400px;
+	width: 333px;
+	display: flex;
+	justify-content: center;
+	align-items: stretch;
+	flex-direction: column;
+	background: #000000;
+	border-radius: 10px;
+	box-shadow: 0 0 10px #000000;
+	overflow: hidden;
+}
+
+.player__thumbnail {
+	flex: 2;
+	overflow: hidden;
+}
+
+.track-thumbnail {
+	max-width: 100%;
+	margin-top: -23px;
+	transition: 1s;
+	transform: scale(1.03);
+}
+
+.player__content {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: flex-end;
+	gap: 10px;
+	flex: 1;
+	background: -webkit-linear-gradient(
+		45deg,
+		rgb(50, 50, 50),
+		rgb(133, 133, 133)
+	);
+}
+
+.player__data {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 15px;
+}
+
+.play-pause {
+	height: 50px;
+	width: 50px;
+	filter: invert(1);
 	cursor: pointer;
+	transition: 0.5s;
+}
+
+.player__info {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: flex-start;
+	gap: 5px;
+}
+
+.track-artist {
+	font-weight: 700;
+	font-size: 20px;
+	color: rgb(193, 255, 6);
+	order: 1;
+}
+
+.track-title {
+	font-weight: 400;
+	color: white;
+	font-size: 17px;
+	order: 2;
+}
+
+.player__buttons {
+	display: flex;
+	flex-direction: column;
+	gap: 2px;
+}
+
+.next-track,
+.previous-track {
+	height: 30px;
+	width: 30px;
+	filter: invert(1);
+	cursor: pointer;
+	transition: 0.5s;
+}
+
+.play-pause:hover,
+.next-track:hover,
+.previous-track:hover {
+	opacity: 0.75;
+}
+
+.player__progress {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	gap: 5px;
+	margin-bottom: 5px;
+}
+
+.total-duration {
+	font-size: 13px;
+	color: rgb(193, 255, 6);
+	align-self: flex-end;
+}
+
+.audio-slider {
+	-webkit-appearance: none;
+	appearance: none;
+	width: 212px;
+	height: 5px;
+	background: #000000;
+	border-radius: 30px;
+}
+
+.audio-slider::-webkit-slider-thumb {
+	-webkit-appearance: none;
+	appearance: none;
+	height: 10px;
+	width: 7px;
+	outline: none;
+	background: -webkit-linear-gradient(
+		45deg,
+		rgb(213, 213, 213),
+		rgb(193, 255, 6)
+	);
+	border-radius: 30px;
+	cursor: pointer;
+}
+
+.current-time {
+	font-size: 13px;
+	color: white;
+	align-self: start;
 }

@@ -14,7 +14,9 @@
 		<main class="main">
 			<section class="player">
 				<div class="player__container">
-					<img src="assets/img/lemonade.png" class="track-thumbnail" alt="track thumbnail">
+					<div class="player__thumbnail">
+						<img src="assets/img/lemonade.png" class="track-thumbnail" alt="track thumbnail">
+					</div>
 					<div class="player__content">
 						<div class="player__data">
 							<img src="assets/icons/play.png" class="play-pause" alt="play">
@@ -24,14 +26,14 @@
 								<audio src="assets/audio/beyonce.mp3" class="track"></audio>
 							</div>
 							<div class="player__buttons">
-								<img src="assets/icons/forward.png" class="next-track" alt="next track">
 								<img src="assets/icons/backward.png" class="previous-track" alt="previous track">
+								<img src="assets/icons/forward.png" class="next-track" alt="next track">
 							</div>
 						</div>
 						<div class="player__progress">
-							<div class="total-duration">00:00</div>
+							<div class="total-duration">0:00</div>
 							<input type="range" class="audio-slider" min="1" max="100" value="0" />
-							<div class="current-time">00:00</div>
+							<div class="current-time">0:00</div>
 						</div>
 					</div>
 				</div>
